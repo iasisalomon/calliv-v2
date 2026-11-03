@@ -1,0 +1,12 @@
+allowBuilds:
+  # Postinstall scripts of these packages only print messages, nothing is built
+  aws-sdk: false
+  bootstrap-vue: false
+  core-js: false
+  nuxt: false
+
+# Nuxt 2 expects a flat node_modules (it resolves vue, vuex, etc. from the project root)
+nodeLinker: hoisted
+
+# Nuxt 2 uses webpack 4, which needs the legacy OpenSSL provider on Node 17+
+nodeOptions: --openssl-legacy-provider
