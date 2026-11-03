@@ -1,6 +1,5 @@
 allowBuilds:
   # Postinstall scripts of these packages only print messages, nothing is built
-  aws-sdk: false
   bootstrap-vue: false
   core-js: false
   nuxt: false

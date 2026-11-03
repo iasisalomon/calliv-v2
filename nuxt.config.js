@@ -18,7 +18,13 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Calliv: a calibration-curve tool for biological sciences. Upload plate-reader results as a CSV and fit a linear regression to the standards.",
+      },
+      { name: "author", content: "Iasi Salomon" },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },

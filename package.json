@@ -1,7 +1,29 @@
 {
-  "name": "calliv",
-  "version": "1.0.0",
+  "name": "calliv-v2",
+  "version": "2.0.0",
+  "description": "A calibration-curve tool for biological sciences: upload plate-reader results as a CSV, organize the readings and fit a linear regression to the standards.",
+  "keywords": [
+    "calibration-curve",
+    "biotechnology",
+    "plate-reader",
+    "linear-regression",
+    "tensorflowjs",
+    "nuxt"
+  ],
+  "homepage": "https://github.com/iasisalomon/calliv-v2#readme",
+  "bugs": {
+    "url": "https://github.com/iasisalomon/calliv-v2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iasisalomon/calliv-v2.git"
+  },
+  "license": "MIT",
+  "author": "Iasi Salomon (https://iasisalomon.pages.dev)",
   "private": true,
+  "engines": {
+    "node": ">=26"
+  },
   "packageManager": "pnpm@12.9.1",
   "scripts": {
     "dev": "nuxt",
@@ -10,27 +32,18 @@
     "generate": "nuxt generate",
     "deploy": "nuxt generate && pnpm dlx wrangler deploy",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint": "npm run lint:js"
+    "lint": "pnpm run lint:js"
   },
   "dependencies": {
-    "@nuxt/content": "^1.14.0",
     "@tensorflow/tfjs-backend-cpu": "^3.21.0",
     "@tensorflow/tfjs-core": "^3.21.0",
-    "apexcharts": "^3.35.0",
-    "aws-sdk": "^2.1125.0",
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.22.0",
-    "child_process": "^1.0.2",
     "core-js": "^3.22.3",
     "highcharts": "^9.3.3",
     "highcharts-vue": "^1.4.0",
-    "jquery": "^3.6.0",
     "lodash": "^4.17.21",
-    "mock-aws-s3": "^4.0.2",
-    "net": "^1.0.2",
-    "nock": "^13.2.4",
     "nuxt": "^2.15.3",
-    "tls": "0.0.1",
     "vue-lodash": "^2.1.2",
     "vue-papa-parse": "^2.0.0",
     "vuex-persistedstate": "^4.1.0"
