@@ -20,6 +20,11 @@ export default () => ({
   standardVals: [0, 4.2, 9.7, 14.6, 22, 33.3, 50, 100],
   standardLectures: [],
   fitLinear: [],
+  // regression method: "gradientDescent" (TensorFlow) or "leastSquares" (exact)
+  regressionMethod: "gradientDescent",
+  // gradient descent training variables
+  learningRate: 0.0001,
+  iterations: 999,
   standardGraph: [],
   tableConfig: {
     chart: {

@@ -15,6 +15,11 @@
           >Process</b-button
         >
       </div>
+      <div class="col-3 my-4">
+        <b-button href="/raw_data.csv" download="raw_data.csv" variant="info"
+          >Download sample CSV</b-button
+        >
+      </div>
     </div>
     <DisplayRawData />
   </div>

@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.14.0",
-    "@tensorflow/tfjs": "^3.16.0",
+    "@tensorflow/tfjs-backend-cpu": "^3.21.0",
+    "@tensorflow/tfjs-core": "^3.21.0",
     "apexcharts": "^3.35.0",
     "aws-sdk": "^2.1125.0",
     "bootstrap": "^4.6.0",

@@ -100,9 +100,26 @@ export default {
   standardGraph: ({ commit, dispatch }) => {
     commit("STANDARD_GRAPH");
   },
-  fitLinear: ({ commit, dispatch }) => {
-    commit("FIT_LINEAR");
-    dispatch("regressionGraph");
+  // regular method (not arrow) so `this` is the store, where $fitLinear is injected
+  async fitLinear({ commit, dispatch, state }) {
+    const { standardVals, standardLectures, regressionMethod } = state;
+    if (standardLectures && standardVals) {
+      // 0 4,2 9,7 14,6 22 33,3 50 100
+      let fit;
+      if (regressionMethod === "leastSquares") {
+        fit = this.$fitLeastSquares(standardVals, standardLectures);
+      } else {
+        fit = await this.$fitLinear(standardVals, standardLectures, {
+          learningRate: state.learningRate,
+          iterations: state.iterations,
+        });
+      }
+      commit("FIT_LINEAR", fit);
+      dispatch("regressionGraph");
+    }
+  },
+  saveRegressionSettings: ({ commit }, payload) => {
+    commit("SET_REGRESSION_SETTINGS", payload);
   },
   regressionGraph: ({ commit }) => {
     commit("REGRESSION_GRAPH");

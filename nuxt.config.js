@@ -32,7 +32,7 @@ export default {
     { src: "~/plugins/highcharts.js", mode: "client" },
     { src: "~/plugins/persistedState.js", mode: "client" },
     { src: "~/plugins/lodash.js" },
-    { src: "~/plugins/fitLinear.js" },
+    { src: "~/plugins/fitLinear.js", mode: "client" },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

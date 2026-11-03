@@ -65,6 +65,15 @@ export default {
   getFitLinear: (state) => {
     return state.fitLinear
   },
+  regressionMethod: (state) => {
+    return state.regressionMethod
+  },
+  learningRate: (state) => {
+    return state.learningRate
+  },
+  iterations: (state) => {
+    return state.iterations
+  },
   tableConfig: (state) => {
     return state.tableConfig
   },

@@ -176,14 +176,12 @@ export default {
       state.tableConfig.series[0].data = standardGraph;
     }
   },
-  FIT_LINEAR(state) {
-    const standardLectures = state.standardLectures;
-    const standardVals = state.standardVals;
-    if (standardLectures && standardVals) {
-      // 0 4,2 9,7 14,6 22 33,3 50 100
-      const fitLinear = this.$fitLinear(standardVals, standardLectures);
-      state.fitLinear = fitLinear;
-    }
+  FIT_LINEAR(state, payload) {
+    state.fitLinear = payload;
+  },
+  SET_REGRESSION_SETTINGS(state, payload) {
+    // payload may hold any of: regressionMethod, learningRate, iterations
+    Object.assign(state, payload);
   },
   REGRESSION_GRAPH(state) {
     const M = state.fitLinear[0];
